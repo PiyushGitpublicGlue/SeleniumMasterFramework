@@ -1,0 +1,44 @@
+[
+  {
+
+    "fistName": "demo1",
+    "lastName": "user",
+    "companyName": "compName",
+    "country": "India",
+    "address1": "userAddress1",
+    "address2": "userAddress2",
+    "city": "Ghaziabad",
+    "state":"Uttar Pradesh",
+    "postCode": "201001",
+    "phoneNumber": "0909090909",
+    "email": "test1@test.com"
+  },
+
+  {
+    "fistName": "demo2",
+    "lastName": "user",
+    "companyName": "compName",
+    "country": "United States (US)",
+    "address1": "userAddress1",
+    "address2": "userAddress2",
+    "city": "VermontCity",
+    "state":"Vermont",
+    "postCode": "05401",
+    "phoneNumber": "0909090909",
+    "email": "test2@test.com"
+  },
+
+  {
+    "fistName": "demo3",
+    "lastName": "user",
+    "companyName": "compName",
+    "country": "New Zealand",
+    "address1": "userAddress1",
+    "address2": "userAddress2",
+    "city": "UK City",
+    "state":"Waikato",
+    "postCode": "3240",
+    "phoneNumber": "0909090909",
+    "email": "test3@test.com"
+  }
+]

@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="38.757" tests="4" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="16"/>
+    <property name="webdriver.chrome.driver" value="C:\Users\homel\.cache\selenium\chromedriver\win32\92.0.4515.107\chromedriver.exe"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\homel\SeleniumMasterFramework\target\test-classes;C:\Users\homel\SeleniumMasterFramework\target\classes;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-java\4.0.0-beta-4\selenium-java-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-api\4.0.0-beta-4\selenium-api-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.0.0-beta-4\selenium-chrome-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\com\google\auto\service\auto-service-annotations\1.0\auto-service-annotations-1.0.jar;C:\Users\homel\.m2\repository\com\google\auto\service\auto-service\1.0\auto-service-1.0.jar;C:\Users\homel\.m2\repository\com\google\auto\auto-common\1.0\auto-common-1.0.jar;C:\Users\homel\.m2\repository\com\google\guava\guava\30.1.1-jre\guava-30.1.1-jre.jar;C:\Users\homel\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\homel\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\homel\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\homel\.m2\repository\org\checkerframework\checker-qual\3.8.0\checker-qual-3.8.0.jar;C:\Users\homel\.m2\repository\com\google\errorprone\error_prone_annotations\2.5.1\error_prone_annotations-2.5.1.jar;C:\Users\homel\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.0.0-beta-4\selenium-chromium-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools\4.0.0-beta-4\selenium-devtools-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-http\4.0.0-beta-4\selenium-http-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-json\4.0.0-beta-4\selenium-json-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.0.0-beta-4\selenium-devtools-v85-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v88\4.0.0-beta-4\selenium-devtools-v88-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v89\4.0.0-beta-4\selenium-devtools-v89-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v90\4.0.0-beta-4\selenium-devtools-v90-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v91\4.0.0-beta-4\selenium-devtools-v91-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.0.0-beta-4\selenium-edge-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.0.0-beta-4\selenium-firefox-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.0.0-beta-4\selenium-firefox-xpi-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.0.0-beta-4\selenium-ie-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.0.0-beta-4\selenium-opera-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.0.0-beta-4\selenium-remote-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\io\netty\netty-buffer\4.1.63.Final\netty-buffer-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-codec-http\4.1.63.Final\netty-codec-http-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-codec\4.1.63.Final\netty-codec-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-common\4.1.63.Final\netty-common-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.63.Final\netty-transport-native-kqueue-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.63.Final\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport\4.1.63.Final\netty-transport-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-resolver\4.1.63.Final\netty-resolver-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-api\1.2.0\opentelemetry-api-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-context\1.2.0\opentelemetry-context-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.2.0\opentelemetry-exporter-logging-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.2.0-alpha\opentelemetry-sdk-metrics-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.2.0\opentelemetry-sdk-common-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.2.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.2.0\opentelemetry-sdk-trace-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-api-metrics\1.2.0-alpha\opentelemetry-api-metrics-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.2.0\opentelemetry-sdk-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.2.0-alpha\opentelemetry-semconv-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\homel\.m2\repository\net\bytebuddy\byte-buddy\1.11.0\byte-buddy-1.11.0.jar;C:\Users\homel\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\homel\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\homel\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\homel\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\homel\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\homel\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\homel\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.0.0-beta-4\selenium-safari-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-support\4.0.0-beta-4\selenium-support-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\Users\homel\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\homel\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\Users\homel\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\Users\homel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\homel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\homel\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Users\homel\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\homel\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\homel\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Users\homel\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\homel\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\homel\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\homel\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\homel\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\homel\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\homel\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\homel\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\homel\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\homel\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\homel\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\homel\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\homel\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\homel\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\homel\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Calcutta"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="IN"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin"/>
+    <property name="sun.java.command" value="C:\Users\homel\AppData\Local\Temp\surefire6297363442807121260\surefirebooter14179453713784998844.jar C:\Users\homel\AppData\Local\Temp\surefire6297363442807121260 2021-08-02T11-04-06_976-jvmRun1 surefire4211188881939939968tmp surefire_015079924106056501774tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\homel\SeleniumMasterFramework\target\test-classes;C:\Users\homel\SeleniumMasterFramework\target\classes;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-java\4.0.0-beta-4\selenium-java-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-api\4.0.0-beta-4\selenium-api-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.0.0-beta-4\selenium-chrome-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\com\google\auto\service\auto-service-annotations\1.0\auto-service-annotations-1.0.jar;C:\Users\homel\.m2\repository\com\google\auto\service\auto-service\1.0\auto-service-1.0.jar;C:\Users\homel\.m2\repository\com\google\auto\auto-common\1.0\auto-common-1.0.jar;C:\Users\homel\.m2\repository\com\google\guava\guava\30.1.1-jre\guava-30.1.1-jre.jar;C:\Users\homel\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\homel\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\homel\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\homel\.m2\repository\org\checkerframework\checker-qual\3.8.0\checker-qual-3.8.0.jar;C:\Users\homel\.m2\repository\com\google\errorprone\error_prone_annotations\2.5.1\error_prone_annotations-2.5.1.jar;C:\Users\homel\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-chromium-driver\4.0.0-beta-4\selenium-chromium-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools\4.0.0-beta-4\selenium-devtools-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-http\4.0.0-beta-4\selenium-http-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-json\4.0.0-beta-4\selenium-json-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v85\4.0.0-beta-4\selenium-devtools-v85-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v88\4.0.0-beta-4\selenium-devtools-v88-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v89\4.0.0-beta-4\selenium-devtools-v89-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v90\4.0.0-beta-4\selenium-devtools-v90-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-devtools-v91\4.0.0-beta-4\selenium-devtools-v91-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\4.0.0-beta-4\selenium-edge-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\4.0.0-beta-4\selenium-firefox-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-firefox-xpi-driver\4.0.0-beta-4\selenium-firefox-xpi-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\4.0.0-beta-4\selenium-ie-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\4.0.0-beta-4\selenium-opera-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\4.0.0-beta-4\selenium-remote-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\io\netty\netty-buffer\4.1.63.Final\netty-buffer-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-codec-http\4.1.63.Final\netty-codec-http-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-codec\4.1.63.Final\netty-codec-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-handler\4.1.63.Final\netty-handler-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-common\4.1.63.Final\netty-common-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-epoll\4.1.63.Final\netty-transport-native-epoll-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.63.Final\netty-transport-native-kqueue-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.63.Final\netty-transport-native-unix-common-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport\4.1.63.Final\netty-transport-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-resolver\4.1.63.Final\netty-resolver-4.1.63.Final.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-api\1.2.0\opentelemetry-api-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-context\1.2.0\opentelemetry-context-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-exporter-logging\1.2.0\opentelemetry-exporter-logging-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-metrics\1.2.0-alpha\opentelemetry-sdk-metrics-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-common\1.2.0\opentelemetry-sdk-common-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-extension-autoconfigure\1.2.0-alpha\opentelemetry-sdk-extension-autoconfigure-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk-trace\1.2.0\opentelemetry-sdk-trace-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-api-metrics\1.2.0-alpha\opentelemetry-api-metrics-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-sdk\1.2.0\opentelemetry-sdk-1.2.0.jar;C:\Users\homel\.m2\repository\io\opentelemetry\opentelemetry-semconv\1.2.0-alpha\opentelemetry-semconv-1.2.0-alpha.jar;C:\Users\homel\.m2\repository\io\ous\jtoml\2.0.0\jtoml-2.0.0.jar;C:\Users\homel\.m2\repository\net\bytebuddy\byte-buddy\1.11.0\byte-buddy-1.11.0.jar;C:\Users\homel\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\homel\.m2\repository\org\asynchttpclient\async-http-client\2.12.3\async-http-client-2.12.3.jar;C:\Users\homel\.m2\repository\org\asynchttpclient\async-http-client-netty-utils\2.12.3\async-http-client-netty-utils-2.12.3.jar;C:\Users\homel\.m2\repository\io\netty\netty-codec-socks\4.1.60.Final\netty-codec-socks-4.1.60.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-handler-proxy\4.1.60.Final\netty-handler-proxy-4.1.60.Final.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-epoll\4.1.60.Final\netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar;C:\Users\homel\.m2\repository\io\netty\netty-transport-native-kqueue\4.1.60.Final\netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar;C:\Users\homel\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\homel\.m2\repository\com\typesafe\netty\netty-reactive-streams\2.0.4\netty-reactive-streams-2.0.4.jar;C:\Users\homel\.m2\repository\com\sun\activation\jakarta.activation\1.2.2\jakarta.activation-1.2.2.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\4.0.0-beta-4\selenium-safari-driver-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\seleniumhq\selenium\selenium-support\4.0.0-beta-4\selenium-support-4.0.0-beta-4.jar;C:\Users\homel\.m2\repository\org\testng\testng\7.3.0\testng-7.3.0.jar;C:\Users\homel\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\homel\.m2\repository\org\apache\ant\ant\1.10.3\ant-1.10.3.jar;C:\Users\homel\.m2\repository\org\apache\ant\ant-launcher\1.10.3\ant-launcher-1.10.3.jar;C:\Users\homel\.m2\repository\junit\junit\4.12\junit-4.12.jar;C:\Users\homel\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\homel\.m2\repository\com\google\inject\guice\4.2.2\guice-4.2.2-no_aop.jar;C:\Users\homel\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\homel\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\homel\.m2\repository\org\yaml\snakeyaml\1.21\snakeyaml-1.21.jar;C:\Users\homel\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\homel\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\homel\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\homel\.m2\repository\io\github\bonigarcia\webdrivermanager\4.4.3\webdrivermanager-4.4.3.jar;C:\Users\homel\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar;C:\Users\homel\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar;C:\Users\homel\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\homel\.m2\repository\org\apache\commons\commons-lang3\3.12.0\commons-lang3-3.12.0.jar;C:\Users\homel\.m2\repository\org\apache\httpcomponents\client5\httpclient5\5.0.3\httpclient5-5.0.3.jar;C:\Users\homel\.m2\repository\org\apache\httpcomponents\core5\httpcore5\5.0.2\httpcore5-5.0.2.jar;C:\Users\homel\.m2\repository\org\apache\httpcomponents\core5\httpcore5-h2\5.0.2\httpcore5-h2-5.0.2.jar;C:\Users\homel\.m2\repository\commons-codec\commons-codec\1.13\commons-codec-1.13.jar;C:\Users\homel\.m2\repository\org\rauschig\jarchivelib\1.1.0\jarchivelib-1.1.0.jar;C:\Users\homel\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar;C:\Users\homel\.m2\repository\org\jsoup\jsoup\1.13.1\jsoup-1.13.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\homel"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-16.0.1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\homel\SeleniumMasterFramework"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\homel\AppData\Local\Temp\surefire6297363442807121260\surefirebooter14179453713784998844.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="16.0.1+9-24"/>
+    <property name="user.name" value="homel"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="sun.nio.ch.bugLevel" value=""/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\homel\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\homel\AppData\Local\Temp\"/>
+    <property name="java.version" value="16.0.1"/>
+    <property name="user.dir" value="C:\Users\homel\SeleniumMasterFramework"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="webdriver.gecko.driver" value="C:\Users\homel\.cache\selenium\geckodriver\win64\0.29.0\geckodriver.exe"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-16.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Users\homel\apache-maven-3.8.1-bin\apache-maven-3.8.1\bin;C:\Users\homel\Gradle\gradle-7.1.1-all\gradle-7.1.1\bin;C:\Program Files\Java\jdk-16.0.1\bin;C:\Users\homel\AppData\Local\Microsoft\WindowsApps;C:\Users\homel\.dotnet\tools;;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2021.1.3\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="16.0.1+9-24"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="60.0"/>
+  </properties>
+  <testcase name="guestCheckoutUsingDirectBankTransfer" classname="org.selenium.pom.tests.MyFirstTestCase" time="18.799">
+    <system-out><![CDATA[CURRENT THREAD ID : 21 , DRIVER : ChromeDriver: chrome on WINDOWS (24629a06d816a98c38db50ab7b0465cc)
+CURRENT THREAD ID : 19 , DRIVER : ChromeDriver: chrome on WINDOWS (c14c50c41105c5e430f2d053ec07c12a)
+CURRENT THREAD ID : 20 , DRIVER : FirefoxDriver: firefox on WINDOWS (ab100dc7-c165-4641-a25f-c0271146cd52)
+CURRENT THREAD ID : 22 , DRIVER : FirefoxDriver: firefox on WINDOWS (7f00727c-c188-4af7-b922-d2ac4d2b0ad3)
+SIZE OF OVERLAY : 2
+OVERLAYS ARE INVISIBLE
+SIZE OF OVERLAY : 2
+]]></system-out>
+    <system-err><![CDATA[SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+1627882449553	geckodriver	INFO	Listening on 127.0.0.1:39737
+1627882449553	geckodSrtairvteirn	gI NCFhOro	mLiesDtreinivnegr  o92n. 01.2475.01.5.010.7 1(87:a841088b180755
+3a07434ea9e2b6dccf3cbe7895134-refs/branch-heads/4515@{#1634}) on port 2301
+Only local connections are allowed.
+Please see https:/St/acrhtroinmge dCrhivroemre.cDhrrivoemri u9m2.o.0r.g4/5s1e5.c1ur07it y(-8c7onas81i8dbe1r0at5i5o3nas0 7f4o3r s4uegag9ee2stbio6ns docnc fk3ecebpein7g 8C9h5r1om3e4D-rrievfesr /sbafre.an
+ch-heads/4515@{#1634}) on port 40714
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+ChromeDriver was started successfully.
+1627882145060287838	2m4o5z0r0u8n3n	emozrunr:ne:rru:n:nreurn	nIeNrF	OI	NRFuOn	nRiunngni cnogm mcaonmdm:a nd"C:: "\\CP:r\o\gPrraomg rFaiml Feisl\e\s\Mo\zMoziillla lFai rFeifroexf\\ofirefox.exxe"\ \"f-i-rmeafroxi.oenxeet"t e""- -"m-a-rrioenmeotttee-"d e"b-u-grgeimnogt-epo-debugging-port" "0" "r-fto"re g"r0o"u n"d-"f "or-engor-oruend" "-no-remote" "-profile" "C:\\Users\\homel\\AppData\\Local\\Temp\\rust_mozprofileXyaSyW"
+mote" "-profile" "C:\\Users\\homel\\AppData\\Local\\Temp\\rust_mozprofileTbeips"
+Aug 02, 2021 11:04:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Aug 02, 2021 11:04:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Aug 02, 2021 11:04:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 92, so returning the closest version found: 91
+Aug 02, 2021 11:04:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 92 of 91
+Aug 02, 2021 11:04:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 92, so returning the closest version found: 91
+Aug 02, 2021 11:04:11 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Found CDP implementation for version 92 of 91
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+DevTools listening on ws://localhost:57996/devtools/browser/23b60da0-e53c-4038-b396-8a96fcaf4159
+DevTools listening on ws://localhost:58000/devtools/browser/f6e2574d-bb57-4d3a-8f72-90aa835b2a48
+1627882456853	Marionette	INFO	Listening on port 64526
+1627882456876	Marionette	INFO	Listening on port 64525
+1627882456922	Marionette	WARN	TLS certificate errors will be ignored for this session
+Aug 02, 2021 11:04:16 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1627882457094	Marionette	WARN	TLS certificate errors will be ignored for this session
+Aug 02, 2021 11:04:17 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+]]></system-err>
+  </testcase>
+  <testcase name="guestCheckoutUsingDirectBankTransfer" classname="org.selenium.pom.tests.MyFirstTestCase" time="26.854">
+    <system-out><![CDATA[SIZE OF OVERLAY : 2
+OVERLAYS ARE INVISIBLE
+SIZE OF OVERLAY : 2
+OVERLAYS ARE INVISIBLE
+]]></system-out>
+    <system-err><![CDATA[1627882480184	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:231:19
+TimedPromise@chrome://marionette/content/sync.js:216:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:433:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1627882481429	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:231:19
+TimedPromise@chrome://marionette/content/sync.js:216:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:433:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1627882481503	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:231:19
+TimedPromise@chrome://marionette/content/sync.js:216:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:433:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+1627882482744	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:231:19
+TimedPromise@chrome://marionette/content/sync.js:216:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:433:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+]]></system-err>
+  </testcase>
+  <testcase name="loginAndCheckoutUsingDirectBankTransfer" classname="org.selenium.pom.tests.MyFirstTestCase" time="21.053">
+    <system-out><![CDATA[OVERLAYS ARE INVISIBLE
+]]></system-out>
+    <system-err><![CDATA[Aug 02, 2021 11:04:36 AM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:831)
+
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+]]></system-err>
+  </testcase>
+  <testcase name="loginAndCheckoutUsingDirectBankTransfer" classname="org.selenium.pom.tests.MyFirstTestCase" time="28.236">
+    <system-err><![CDATA[1627882484267	Marionette	INFO	Stopped listening on port 64526
+!!! error running onStopped callback: TypeError: callback is not a function
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1627882484719	RemoteAgent	ERROR	unable to stop listener: [Exception... "Component returned failure code: 0x8000ffff (NS_ERROR_UNEXPECTED) [nsIWindowMediator.getEnumerator]"  nsresult: "0x8000ffff (NS_ERROR_UNEXPECTED)"  location: "JS frame :: chrome://remote/content/cdp/observers/TargetObserver.jsm :: stop :: line 61"  data: no] Stack trace: stop()@TargetObserver.jsm:61
+unwatchForTabs()@TargetList.jsm:71
+unwatchForTargets()@TargetList.jsm:38
+destructor()@TargetList.jsm:110
+close()@RemoteAgent.jsm:124
+]]></system-err>
+  </testcase>
+</testsuite>

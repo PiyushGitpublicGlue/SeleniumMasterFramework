@@ -1,0 +1,41 @@
+package org.selenium.pom.tests;
+
+import org.selenium.pom.api.actions.CartApi;
+import org.selenium.pom.api.actions.SignUpApi;
+import org.selenium.pom.base.BaseTest;
+import org.selenium.pom.objects.Product;
+import org.selenium.pom.objects.UserLogin;
+import org.selenium.pom.pages.CheckoutPage;
+import org.selenium.pom.utils.FakerUtils;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.io.IOException;
+
+public class LoginTest extends BaseTest {
+
+    @Test
+    public void loginDuringCheckOut() throws IOException, InterruptedException {
+        SignUpApi signup = new SignUpApi();
+        String username = "demouser"+ new FakerUtils().generateRandomNumber();
+        UserLogin user = new UserLogin()
+                .setUsername(username)
+                .setPassword("demopwd")
+                .setEmail(username+"@test.com");
+        signup.register(user);
+
+        CartApi cartapi = new CartApi();
+        Product product = new Product(1211);
+        cartapi.addToCart(product.getId(),1);
+
+        CheckoutPage checkoutpage = new CheckoutPage(getDriver()).load();
+        Thread.sleep(5000);
+        injectCookiesToBrowser(cartapi.getCookies());
+        checkoutpage.load();
+        Thread.sleep(5000);
+        checkoutpage.doLogin(user.getUsername(),user.getPassword());
+        Thread.sleep(5000);
+        Assert.assertTrue(checkoutpage.getProductName().contains(product.getName()));
+        }
+    }
+

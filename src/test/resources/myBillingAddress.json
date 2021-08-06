@@ -1,0 +1,13 @@
+{
+  "fistName": "demo",
+  "lastName": "user",
+  "companyName": "compName",
+  "country": "India",
+  "address1": "userAddress1",
+  "address2": "userAddress2",
+  "city": "Ghaziabad",
+  "state":"Uttar Pradesh",
+  "postCode": "201001",
+  "phoneNumber": "0909090909",
+  "email": "test@test.com"
+}
