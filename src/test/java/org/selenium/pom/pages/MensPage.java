@@ -10,9 +10,15 @@ public class MensPage extends BasePage {
 
 
     private By title = By.cssSelector(".woocommerce-products-header__title.page-title");
+    private ProductThumbnail productThumbnail;
+
+    public ProductThumbnail getProductThumbnail() {
+        return productThumbnail;
+    }
 
     public MensPage(WebDriver driver) {
         super(driver);
+        productThumbnail=new ProductThumbnail(driver);
     }
 
 

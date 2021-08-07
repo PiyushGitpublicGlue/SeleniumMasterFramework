@@ -1,27 +1,31 @@
 [
-
   {
     "id": 1215,
+    "Page": "Men",
     "name": "Blue Shoes"
   },
 
   {
     "id": 1209,
+    "Page": "Women",
     "name": "Denim Blue Jeans"
   },
 
   {
     "id": 1205,
+    "Page": "Men",
     "name": "Basic Blue Jeans"
   },
 
   {
     "id": 1198,
+    "Page": "Women",
     "name": "Anchor Bracelet"
   },
 
   {
     "id": 1196,
+    "Page": "Women",
     "name": "Blue Tshirt"
   },
   {

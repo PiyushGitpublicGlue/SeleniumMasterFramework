@@ -25,7 +25,7 @@ public class AddToCartTest extends BaseTest {
                 cartpage.isLoaded();
         Assert.assertEquals(cartpage.getProductNameFromCart(),product.getName());
     }
-    @Test(dataProvider = "getfeaturedproducts",dataProviderClass = MyDataProvider.class)
+    @Test(dataProvider = "getFeaturedProducts",dataProviderClass = MyDataProvider.class)
     public void addToCartFeaturedProduct(Product product){
         CartPage cartPage = new HomePage(getDriver()).load()
                 .getProductThumbnail()
@@ -34,11 +34,41 @@ public class AddToCartTest extends BaseTest {
         Assert.assertEquals(cartPage.getProductNameFromCart(),product.getName());
     }
 
-    @Test(dataProvider = "getStoreproducts",dataProviderClass = MyDataProvider.class)
+    @Test(dataProvider = "getStoreProducts",dataProviderClass = MyDataProvider.class)
     public void addToCartProductFromStorePage(Product product){
         CartPage cartPage = new HomePage(getDriver()).load()
                 .getMyHeader()
                 .navigateToStoreUsingMenu()
+                .getProductThumbnail()
+                .clickAddToCartBtn(product.getName())
+                .clickOnViewCartBtn();
+        Assert.assertEquals(cartPage.getProductNameFromCart(),product.getName());
+    }
+    @Test(dataProvider = "getMensProducts",dataProviderClass = MyDataProvider.class)
+    public void addToCartProductFromMensPage(Product product){
+        CartPage cartPage = new HomePage(getDriver()).load()
+                .getMyHeader()
+                .navigateToMenSectionUsingMenu()
+                .getProductThumbnail()
+                .clickAddToCartBtn(product.getName())
+                .clickOnViewCartBtn();
+        Assert.assertEquals(cartPage.getProductNameFromCart(),product.getName());
+    }
+    @Test(dataProvider = "getWomenProducts",dataProviderClass = MyDataProvider.class)
+    public void addToCartProductFromWomenPage(Product product){
+        CartPage cartPage = new HomePage(getDriver()).load()
+                .getMyHeader()
+                .navigateToWomenSectionUsingMenu()
+                .getProductThumbnail()
+                .clickAddToCartBtn(product.getName())
+                .clickOnViewCartBtn();
+        Assert.assertEquals(cartPage.getProductNameFromCart(),product.getName());
+    }
+    @Test(dataProvider = "getAccessoriesProducts",dataProviderClass = MyDataProvider.class)
+    public void addToCartProductFromAccessoriesPage(Product product){
+        CartPage cartPage = new HomePage(getDriver()).load()
+                .getMyHeader()
+                .navigateToAccessoriesSectionUsingMenu()
                 .getProductThumbnail()
                 .clickAddToCartBtn(product.getName())
                 .clickOnViewCartBtn();
