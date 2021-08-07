@@ -5,25 +5,25 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 
-public class AccessoriesPage extends BasePage {
+public class AboutUsPage extends BasePage {
 
 
-    private By title = By.cssSelector(".woocommerce-products-header__title.page-title");
+    private By title = By.cssSelector(".has-text-align-center");
 
-    public AccessoriesPage(WebDriver driver) {
+    public AboutUsPage(WebDriver driver) {
         super(driver);
     }
 
 
     public boolean isLoaded(){
 
-        return wait.until(ExpectedConditions.urlContains("/product-category/accessories"));
+        return wait.until(ExpectedConditions.urlContains("/about"));
     }
 
 
-    public AccessoriesPage load(){
+    public AboutUsPage load(){
 
-        load("/product-category/accessories");
+        load("/about");
         return this;
     }
 

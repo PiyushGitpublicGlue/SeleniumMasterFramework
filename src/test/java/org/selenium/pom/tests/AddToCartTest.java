@@ -38,7 +38,7 @@ public class AddToCartTest extends BaseTest {
     public void addToCartProductFromStorePage(Product product){
         CartPage cartPage = new HomePage(getDriver()).load()
                 .getMyHeader()
-                .nativateToStoreUsingMenu()
+                .navigateToStoreUsingMenu()
                 .getProductThumbnail()
                 .clickAddToCartBtn(product.getName())
                 .clickOnViewCartBtn();

@@ -27,7 +27,7 @@ public class MyFirstTestCase extends BaseTest {
             BillingAddress billingAddress = JacksonsUtils.deserializeJson("myBillingAddress.json",BillingAddress.class);
             Product product = new Product(1215);
             //Product product = new Product(1211);
-            StorePage storePage = new HomePage(getDriver()).load().getMyHeader().nativateToStoreUsingMenu().search(searchFor);
+            StorePage storePage = new HomePage(getDriver()).load().getMyHeader().navigateToStoreUsingMenu().search(searchFor);
             Assert.assertEquals(storePage.getTitle(),"Search results: “"+searchFor+"”");
             storePage.getProductThumbnail().clickAddToCartBtn(product.getName());
             CartPage cartPage = storePage.getProductThumbnail().clickOnViewCartBtn();
@@ -49,7 +49,7 @@ public class MyFirstTestCase extends BaseTest {
         Product product = new Product(1211);
         HomePage homePage = new HomePage(getDriver());
         homePage.load();
-        StorePage storePage = homePage.getMyHeader().nativateToStoreUsingMenu();
+        StorePage storePage = homePage.getMyHeader().navigateToStoreUsingMenu();
         storePage.isLoaded();
         String titleAfterSearch = storePage.search(searchFor).getTitle();
         Assert.assertEquals(titleAfterSearch,"Search results: “"+searchFor+"”");
@@ -74,7 +74,7 @@ public class MyFirstTestCase extends BaseTest {
         Product product = new Product(1211);
         HomePage homePage = new HomePage(getDriver());
         homePage.load();
-        StorePage storePage = homePage.getMyHeader().nativateToStoreUsingMenu();
+        StorePage storePage = homePage.getMyHeader().navigateToStoreUsingMenu();
         storePage.isLoaded();
         String titleAfterSearch = storePage.search(searchFor).getTitle();
         Assert.assertEquals(titleAfterSearch,"Search results: “"+searchFor+"”");
