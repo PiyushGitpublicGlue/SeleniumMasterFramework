@@ -1,6 +1,7 @@
 package org.selenium.pom.tests;
 
 import com.fasterxml.jackson.databind.ser.Serializers;
+import org.selenium.pom.pages.MensPage;
 import org.selenium.pom.pages.StorePage;
 import org.selenium.pom.base.BaseTest;
 import org.selenium.pom.pages.components.ProductSearch;
@@ -59,7 +60,17 @@ public class SearchTest extends BaseTest {
     public void searchAllProductsOnStorePage(){
         StorePage storepage = new StorePage(getDriver()).load();
         Assert.assertEquals(storepage.getTitle(),"Store");
-        storepage.searchAllProductsOnStorePage();
+        ProductSearch productSearch = new ProductSearch(getDriver());
+        productSearch.productOnPage();
+
+    }
+
+    @Test
+    public void searchAllProductsOnMenPage(){
+        MensPage mensPage = new MensPage(getDriver()).load();
+        Assert.assertEquals(mensPage.getTitle(),"Men");
+        ProductSearch productSearch = new ProductSearch(getDriver());
+        productSearch.productOnPage();
 
     }
 }

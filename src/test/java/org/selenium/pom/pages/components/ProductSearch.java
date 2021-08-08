@@ -13,6 +13,8 @@ public class ProductSearch extends BasePage {
     private By searchBox = By.id("woocommerce-product-search-field-0");
     private By searchBnt = By.cssSelector("button[value='Search']");
     private By totalProductAfterSearch = By.cssSelector(".woocommerce-loop-product__title");
+    private By productOnPageTitle = By.cssSelector(".woocommerce-result-count");
+    private By nextPage = By.xpath("//a[contains(text(),'→')]");
 
 
 
@@ -46,6 +48,10 @@ public class ProductSearch extends BasePage {
 
     }
 
+    public String getTotalProductsOnPageTitle(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(productOnPageTitle)).getText();
+    }
+
 
 
     public int searchedProductList(){
@@ -57,6 +63,29 @@ public class ProductSearch extends BasePage {
             System.out.println(e.getText());
             count++;
         }
+        return count;
+
+    }
+
+    public int productOnPage(){
+
+        int count=0;
+        List<WebElement> productListWebElements = driver.findElements(totalProductAfterSearch);
+        System.out.println("TOTAL PRODUCTS ON PAGE : "+getTotalProductsOnPageTitle());
+        for (WebElement e:productListWebElements) {
+            System.out.println(e.getText());
+            count++;
+        }
+        if(driver.findElements(nextPage).size()>=1)
+        {
+            driver.findElement(nextPage).click();
+            List<WebElement> productListWebElementsNext = driver.findElements(totalProductAfterSearch);
+            for (WebElement e:productListWebElementsNext) {
+                System.out.println(e.getText());
+                count++;
+            }
+        }
+        System.out.println("TOTAL PRODUCT COUNT : "+count);
         return count;
 
     }

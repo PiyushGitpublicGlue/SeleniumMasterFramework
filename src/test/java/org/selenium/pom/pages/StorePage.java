@@ -16,7 +16,6 @@ public class StorePage extends BasePage {
     private By addToCartBtn = By.cssSelector("a[aria-label='Add “Blue Shoes” to your cart']");
     private ProductThumbnail productThumbnail;
     private ProductSearch productSearch;
-    private By nextPage = By.xpath("//a[contains(text(),'→')]");
 
 
 
@@ -60,21 +59,6 @@ public class StorePage extends BasePage {
     public String getTitle(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(title)).getText();
     }
-    public WebElement IsDisplayedNextPageButton() {
-         return wait.until(ExpectedConditions.visibilityOfElementLocated(nextPage));
-
-    }
-    public int searchAllProductsOnStorePage(){
-
-        int count1=productSearch.searchedProductList();
-        int count2=0;
-        if(IsDisplayedNextPageButton().isDisplayed())
-        { IsDisplayedNextPageButton().click();
-        count2=productSearch.searchedProductList();}
-        int countBothPages=count1+count2;
-        System.out.println("Product Count is : "+countBothPages);
-        return countBothPages;
 
 
-    }
 }

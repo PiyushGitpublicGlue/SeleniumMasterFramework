@@ -36,6 +36,7 @@ public class MensPage extends BasePage {
 
 
 
+
     public String getTitle(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(title)).getText();
     }

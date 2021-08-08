@@ -2,6 +2,7 @@ package org.selenium.pom.dataprovider;
 
 import org.selenium.pom.objects.BillingAddress;
 import org.selenium.pom.objects.Product;
+import org.selenium.pom.objects.ShippingAddress;
 import org.selenium.pom.utils.JacksonsUtils;
 import org.testng.annotations.DataProvider;
 
@@ -43,6 +44,12 @@ public class MyDataProvider {
     public Object[] getBillingAddress() throws IOException {
 
         return JacksonsUtils.deserializeJson("allBillingAddress.json", BillingAddress[].class);
+    }
+
+    @DataProvider(name = "getShippingAddressData", parallel = false)
+    public Object[] getShippingAddress() throws IOException {
+
+        return JacksonsUtils.deserializeJson("shippingAddress.json", ShippingAddress[].class);
     }
 
 
