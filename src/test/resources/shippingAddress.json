@@ -1,8 +1,14 @@
-[{
-
+[
+  {
   "country": "India",
   "state":"Uttar Pradesh",
   "city": "Ghaziabad",
   "postCode": "201001"
-
-}]
+  },
+  {
+  "country": "India",
+  "state":"Uttar Pradesh",
+  "city": "TestCity",
+  "postCode": "201011"
+  }
+]
