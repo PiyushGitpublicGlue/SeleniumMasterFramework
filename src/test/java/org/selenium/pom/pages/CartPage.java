@@ -9,7 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
+import org.selenium.pom.objects.Coupons;
 import org.selenium.pom.objects.ShippingAddress;
+import org.selenium.pom.pages.components.ProductThumbnail;
 
 public class CartPage extends BasePage {
 
@@ -27,12 +29,30 @@ public class CartPage extends BasePage {
     @FindBy(xpath = "//*[@name='calc_shipping']")@CacheLookup private WebElement updateShippingAddressBtn;
     private By overlay = By.cssSelector(".blockUI.blockOverlay");
     @FindBy(xpath = "//*[@class='woocommerce-shipping-destination']//strong")@CacheLookup private WebElement getUpdatedShippingAddress;
+    private By getTotal = By.xpath("//tr[@class='order-total']//bdi[1]");
+    private By getCouponCodeField = By.id("coupon_code");
+    private By getCouponCodeApplyBtn = By.cssSelector("button[value='Apply coupon']");
+    private By couponAmount = By.xpath("//tbody/tr[@class='cart-discount coupon-off25']/td[1]/span[1]");
+    private By getSuccessMsgAfterCouponApply = By.xpath("//div[@role='alert']");
    // @FindBy(css = ".has-text-align-center") private WebElement cartHeading;
 
     public CartPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver,this);
     }
+
+    private By getCouponAppliedByElement(String couponName){
+
+        return By.cssSelector("tbody/tr[@class='cart-discount coupon-“"+couponName+"”']/td[1]/span[1]");
+
+    }
+
+
+    public String getCouponAmount(String couponName){
+        By couponAmount = By.xpath("//td[@data-title='Coupon: "+couponName+"']");
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(couponAmount)).getText();
+    }
+
 
     public boolean isLoaded(){
         return wait.until(ExpectedConditions.textToBe(cartHeading,"Cart"));
@@ -95,6 +115,10 @@ public class CartPage extends BasePage {
                 .enterPostCode(shippingAddress.getPostCode());
     }
 
+    public CartPage setCoupons(Coupons coupons){
+        return getCouponCodeField(coupons.getCoupon());
+    }
+
     public CartPage updateShippingAddress(){
 
         wait.until(ExpectedConditions.elementToBeClickable(updateShippingAddressBtn)).click();
@@ -104,5 +128,26 @@ public class CartPage extends BasePage {
     public String getUpdatedShippingAddress(){
         waitForOverlayToDisappear(overlay);
         return wait.until(ExpectedConditions.elementToBeClickable(getUpdatedShippingAddress)).getText();
+    }
+
+    public String getTotal(){
+
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(getTotal)).getText();
+    }
+
+    public CartPage getCouponCodeField(String coupon){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(getCouponCodeField)).sendKeys(coupon);
+        return this;
+    }
+
+    public CartPage getCouponCodeApplyBtn(){
+        wait.until(ExpectedConditions.elementToBeClickable(getCouponCodeApplyBtn)).click();
+        return this;
+    }
+
+
+    public String getSuccessMsgAfterCouponApply(){
+        waitForOverlayToDisappear(overlay);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(getSuccessMsgAfterCouponApply)).getText();
     }
 }

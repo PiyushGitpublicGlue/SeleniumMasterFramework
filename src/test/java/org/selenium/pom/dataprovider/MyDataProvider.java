@@ -1,6 +1,7 @@
 package org.selenium.pom.dataprovider;
 
 import org.selenium.pom.objects.BillingAddress;
+import org.selenium.pom.objects.Coupons;
 import org.selenium.pom.objects.Product;
 import org.selenium.pom.objects.ShippingAddress;
 import org.selenium.pom.utils.JacksonsUtils;
@@ -50,6 +51,12 @@ public class MyDataProvider {
     public Object[] getShippingAddress() throws IOException {
 
         return JacksonsUtils.deserializeJson("shippingAddress.json", ShippingAddress[].class);
+    }
+
+    @DataProvider(name = "getCouponsData", parallel = false)
+    public Object[] getCouponsData() throws IOException {
+
+        return JacksonsUtils.deserializeJson("Coupons.json", Coupons[].class);
     }
 
 
