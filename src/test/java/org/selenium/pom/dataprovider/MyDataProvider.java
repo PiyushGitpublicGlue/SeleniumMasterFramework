@@ -53,7 +53,7 @@ public class MyDataProvider {
         return JacksonsUtils.deserializeJson("shippingAddress.json", ShippingAddress[].class);
     }
 
-    @DataProvider(name = "getCouponsData", parallel = false)
+    @DataProvider(name = "getCouponsData", parallel = true)
     public Object[] getCouponsData() throws IOException {
 
         return JacksonsUtils.deserializeJson("Coupons.json", Coupons[].class);

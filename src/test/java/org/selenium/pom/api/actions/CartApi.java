@@ -41,7 +41,7 @@ public class CartApi {
                 .headers(headers)
                 .formParams(formParams)
                 .cookies(cookies)
-                .log().all()
+                //.log().all()
                 .when().post("/?wc-ajax=add_to_cart").then().log().all().extract().response();
 
         if(response.getStatusCode() !=200){

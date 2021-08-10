@@ -87,5 +87,7 @@ public class MyFirstTestCase extends BaseTest {
         orderRecived orderrecived =  checkoutPage.clickOnOrderBtn();
         Assert.assertEquals(orderrecived.verifyOrder(),"Thank you. Your order has been received.");
 
+
+
     }
 }

@@ -14,7 +14,7 @@ import java.util.HashMap;
 
 import static io.restassured.RestAssured.given;
 
-public class SignUpApi {
+public class BillingAddressApi {
 
         private Cookies cookies;
         public Cookies getCookies(){

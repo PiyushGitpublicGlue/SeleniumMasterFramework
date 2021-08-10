@@ -9,6 +9,8 @@ public class AccountPage extends BasePage {
 
 
     private By title = By.cssSelector(".has-text-align-center");
+    private By getOrderSection = By.xpath("//a[normalize-space()='Orders']");
+    private By viewOrderNumber = By.xpath("//tbody//tr//td//a");
 
     public AccountPage(WebDriver driver) {
         super(driver);
@@ -31,6 +33,15 @@ public class AccountPage extends BasePage {
 
     public String getTitle(){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(title)).getText();
+    }
+
+    public AccountPage getMyOrderSection(){
+        wait.until(ExpectedConditions.visibilityOfElementLocated(getOrderSection)).click();
+        return this;
+    }
+
+    public String viewOrderNumber(){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(viewOrderNumber)).getText();
     }
 
 
