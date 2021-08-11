@@ -42,7 +42,9 @@ public class CartApi {
                 .formParams(formParams)
                 .cookies(cookies)
                 //.log().all()
-                .when().post("/?wc-ajax=add_to_cart").then().log().all().extract().response();
+                .when().post("/?wc-ajax=add_to_cart").then()
+                //.log().all()
+                .extract().response();
 
         if(response.getStatusCode() !=200){
             throw new RuntimeException("Failed to add product"+productID+" to cart"+response.statusCode());

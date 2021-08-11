@@ -37,7 +37,9 @@ public class SignUpApi {
             Cookies cookies=new Cookies();
             Response response = given().baseUri(ConfigLoader.getInstance().getBaseUrl()).cookies(cookies)
                     //.log().all()
-                    .when().get("/account").then().log().all().extract().response();
+                    .when().get("/account").then()
+                    //.log().all()
+                    .extract().response();
 
             if(response.getStatusCode() !=200){
                 throw new RuntimeException("Failed to fetch account, :"+response.statusCode());
@@ -60,8 +62,10 @@ public class SignUpApi {
                 .headers(headers)
                 .formParams(formParams)
                 .cookies(cookies)
-                .log().all()
-                .when().post("/account").then().log().all().extract().response();
+                //.log().all()
+                .when().post("/account").then()
+                //.log().all()
+                .extract().response();
 
         if(response.getStatusCode() !=302){
             throw new RuntimeException("Failed to register account, :"+response.statusCode());

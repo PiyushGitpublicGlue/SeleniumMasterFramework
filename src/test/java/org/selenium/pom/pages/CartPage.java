@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.objects.Coupons;
 import org.selenium.pom.objects.ShippingAddress;
-import org.selenium.pom.pages.components.ProductThumbnail;
 
 public class CartPage extends BasePage {
 
