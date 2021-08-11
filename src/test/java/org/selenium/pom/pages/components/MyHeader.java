@@ -2,6 +2,7 @@ package org.selenium.pom.pages.components;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.pages.*;
@@ -15,6 +16,8 @@ public class MyHeader extends BasePage {
     private By homeAccountLink = By.id("menu-item-1237");
     private By homeAboutLink = By.id("menu-item-1232");
     private By homeContactUsLink = By.id("menu-item-1233");
+    private By miniCart = By.cssSelector(".cart-container");
+    private By productTitleOnMiniCart = By.xpath("//div[@class='site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container']//a[normalize-space()='Blue Shoes']");
 
 
     public MyHeader(WebDriver driver) {
@@ -49,6 +52,24 @@ public class MyHeader extends BasePage {
         wait.until(ExpectedConditions.elementToBeClickable(homeContactUsLink)).click();
         return new ContactUsPage(driver);
     }
+
+    public MyHeader hoverOverMiniCart() {
+
+        Actions action = new Actions(driver);
+        action.moveToElement(wait.until(ExpectedConditions.visibilityOfElementLocated(miniCart))).build().perform();
+        return this;
+    }
+
+    public By getProductTitleOnMiniCartByElement(String productName){
+        return By.xpath("//div[@class='site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container']//a[normalize-space()='"+productName+"']");
+    }
+
+    public String getProductTitleOnMiniCart(String productName){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(getProductTitleOnMiniCartByElement(productName))).getText();
+
+    }
+
+
 
 
 }

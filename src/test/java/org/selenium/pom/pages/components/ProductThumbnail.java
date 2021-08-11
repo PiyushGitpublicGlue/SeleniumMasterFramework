@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.pages.CartPage;
-import org.selenium.pom.pages.HomePage;
 
 public class ProductThumbnail extends BasePage {
 
@@ -27,8 +26,25 @@ public class ProductThumbnail extends BasePage {
         return this;
     }
 
+    private By getProductPriceByElement(String productName){
+        return By.xpath("//*[contains(text(),'"+productName+"')]//..//..//span[2]//bdi");
+    }
+
+    public String getProductPrice(String productName){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(getProductPriceByElement(productName))).getText();
+
+    }
+
     public CartPage clickOnViewCartBtn(){
         wait.until(ExpectedConditions.elementToBeClickable(viewCartLink)).click();
         return new CartPage(driver);
+    }
+
+    public double productPriceInInt(String productName){
+
+        String priceInString = getProductPrice(productName);
+        priceInString = priceInString.replaceAll("\\$","");
+        return Double.parseDouble(priceInString);
+
     }
 }
