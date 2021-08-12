@@ -23,6 +23,7 @@ public class ProductThumbnail extends BasePage {
     public ProductThumbnail clickAddToCartBtn(String productName){
         By addToCartBtn = getAddToCardByElement(productName);
         wait.until(ExpectedConditions.elementToBeClickable(addToCartBtn)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(viewCartLink));
         return this;
     }
 

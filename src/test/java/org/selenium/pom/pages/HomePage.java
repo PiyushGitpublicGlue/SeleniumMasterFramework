@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
+import org.selenium.pom.pages.components.MyFooter;
 import org.selenium.pom.pages.components.MyHeader;
 import org.selenium.pom.pages.components.ProductThumbnail;
 
@@ -11,6 +12,17 @@ public class HomePage extends BasePage {
 
     private MyHeader myHeader;
     private ProductThumbnail productThumbnail;
+    private MyFooter myFooter;
+
+    public MyFooter getMyFooter() {
+        return myFooter;
+    }
+
+    public void setMyFooter(MyFooter myFooter) {
+        this.myFooter = myFooter;
+    }
+
+
 
     public MyHeader getMyHeader() {
         return myHeader;
@@ -36,6 +48,7 @@ public class HomePage extends BasePage {
         super(driver);
         myHeader= new MyHeader(driver);
         productThumbnail = new ProductThumbnail(driver);
+        myFooter = new MyFooter(driver);
     }
 
 

@@ -18,7 +18,7 @@ public class MyHeader extends BasePage {
     private By homeContactUsLink = By.id("menu-item-1233");
     private By miniCart = By.cssSelector(".cart-container");
     private By productTitleOnMiniCart = By.xpath("//div[@class='site-primary-header-wrap ast-builder-grid-row-container site-header-focus-item ast-container']//a[normalize-space()='Blue Shoes']");
-
+    private By getSubTotalFromMiniCart = By.xpath("//*[contains(text(),'Subtotal:')]//..//span//bdi[1]");
 
     public MyHeader(WebDriver driver) {
         super(driver);
@@ -67,6 +67,12 @@ public class MyHeader extends BasePage {
     public String getProductTitleOnMiniCart(String productName){
         return wait.until(ExpectedConditions.visibilityOfElementLocated(getProductTitleOnMiniCartByElement(productName))).getText();
 
+    }
+
+    public double getSubTotalFromMiniCart(){
+        String subTotal=wait.until(ExpectedConditions.visibilityOfElementLocated(getSubTotalFromMiniCart)).getText();
+        subTotal = subTotal.replaceAll("\\$","");
+        return Double.parseDouble(subTotal);
     }
 
 

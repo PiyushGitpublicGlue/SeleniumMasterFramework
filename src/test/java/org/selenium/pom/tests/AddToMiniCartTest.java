@@ -34,7 +34,10 @@ public class AddToMiniCartTest extends BaseTest {
         double productPrice=homePage.getProductThumbnail().clickAddToCartBtn(product.getName()).productPriceInInt(product.getName());
         System.out.println("PRODUCT PRICE : "+productPrice);
         homePage.getMyHeader().hoverOverMiniCart();
+        double productSubTotal = homePage.getMyHeader().getSubTotalFromMiniCart();
+        System.out.println("PRODUCT SUBTOTAL PRICE ON MINI CART : "+productSubTotal);
         Assert.assertEquals(product.getName(),homePage.getMyHeader().getProductTitleOnMiniCart(product.getName()));
+        Assert.assertEquals(productPrice,productSubTotal);
         System.out.println("PRODUCT NAME ADDED TO CART : "+product.getName());
         System.out.println("PRODUCT TITLE FROM MINI CART : "+homePage.getMyHeader().getProductTitleOnMiniCart(product.getName()));
 
