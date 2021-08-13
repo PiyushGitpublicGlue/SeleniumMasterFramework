@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
+import org.testng.Assert;
 
 import java.util.List;
 
@@ -88,25 +89,27 @@ public class MyFooter extends BasePage {
         for (WebElement e : getFooterLinks()) {
             e.sendKeys(clicklnk);
             System.out.println("URL IN href : "+e.getAttribute("href"));
-            driverWindowSwitch();
+            String windowUrl = driverWindowSwitch();
+            Assert.assertEquals(windowUrl,e.getAttribute("href"));
         }
         return this;
     }
 
-    public void driverWindowSwitch() {
+    public String driverWindowSwitch() {
         //Current window handle
         String winHandleBefore = driver.getWindowHandle();
         //Handle new open window
         for (String winHandle : driver.getWindowHandles()) {
             driver.switchTo().window(winHandle);}
             //perform action on new window
+            String windowUrl = driver.getCurrentUrl();
             System.out.println("URL OF WINDOW : "+driver.getCurrentUrl());
             System.out.println("TITLE OF WINDOW : "+driver.getTitle());
             //close new window
             driver.close();
             // Switch back to original browser (first window)
             driver.switchTo().window(winHandleBefore);
-
+            return windowUrl;
         }
 
 

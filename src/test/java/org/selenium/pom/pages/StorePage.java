@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.pages.components.ProductSearch;
 import org.selenium.pom.pages.components.ProductThumbnail;
+import org.selenium.pom.pages.components.SideBarThumbnail;
 
 public class StorePage extends BasePage {
 
@@ -16,6 +17,18 @@ public class StorePage extends BasePage {
     private By addToCartBtn = By.cssSelector("a[aria-label='Add “Blue Shoes” to your cart']");
     private ProductThumbnail productThumbnail;
     private ProductSearch productSearch;
+    private SideBarThumbnail sideBarThumbnail;
+
+
+    public SideBarThumbnail getSideBarThumbnail() {
+        return sideBarThumbnail;
+    }
+
+    public void setSideBarThumbnail(SideBarThumbnail sideBarThumbnail) {
+        this.sideBarThumbnail = sideBarThumbnail;
+    }
+
+
 
 
 
@@ -36,6 +49,7 @@ public class StorePage extends BasePage {
         super(driver);
         productThumbnail=new ProductThumbnail(driver);
         productSearch=new ProductSearch(driver);
+        sideBarThumbnail=new SideBarThumbnail(driver);
     }
 
 

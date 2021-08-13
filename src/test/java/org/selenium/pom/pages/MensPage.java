@@ -5,12 +5,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.selenium.pom.base.BasePage;
 import org.selenium.pom.pages.components.ProductThumbnail;
+import org.selenium.pom.pages.components.SideBarThumbnail;
 
 public class MensPage extends BasePage {
 
 
     private By title = By.cssSelector(".woocommerce-products-header__title.page-title");
     private ProductThumbnail productThumbnail;
+    private SideBarThumbnail sideBarThumbnail;
+
+    public SideBarThumbnail getSideBarThumbnail() {
+        return sideBarThumbnail;
+    }
+
+    public void setSideBarThumbnail(SideBarThumbnail sideBarThumbnail) {
+        this.sideBarThumbnail = sideBarThumbnail;
+    }
+
+
 
     public ProductThumbnail getProductThumbnail() {
         return productThumbnail;
@@ -19,6 +31,7 @@ public class MensPage extends BasePage {
     public MensPage(WebDriver driver) {
         super(driver);
         productThumbnail=new ProductThumbnail(driver);
+        sideBarThumbnail=new SideBarThumbnail(driver);
     }
 
 
