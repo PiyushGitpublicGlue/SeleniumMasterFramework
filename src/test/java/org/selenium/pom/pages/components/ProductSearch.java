@@ -81,7 +81,7 @@ public class ProductSearch extends BasePage {
             driver.findElement(nextPage).click();
             List<WebElement> productListWebElementsNext = driver.findElements(totalProductAfterSearch);
             for (WebElement e:productListWebElementsNext) {
-                System.out.println(e.getText());
+                System.out.println("PRODUCT NAME ON PAGE : "+e.getText());
                 count++;
             }
         }

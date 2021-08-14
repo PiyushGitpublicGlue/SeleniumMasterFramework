@@ -19,6 +19,16 @@ public class StorePage extends BasePage {
     private ProductSearch productSearch;
     private SideBarThumbnail sideBarThumbnail;
 
+    public ProductSearch getProductSearch() {
+        return productSearch;
+    }
+
+    public void setProductSearch(ProductSearch productSearch) {
+        this.productSearch = productSearch;
+    }
+
+
+
 
     public SideBarThumbnail getSideBarThumbnail() {
         return sideBarThumbnail;
