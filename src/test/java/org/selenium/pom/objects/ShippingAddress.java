@@ -7,6 +7,17 @@ public class ShippingAddress {
     private String postCode;
     private String country;
     private String state;
+    private double salesTax;
+
+    public double getSalesTax() {
+        return salesTax;
+    }
+
+    public void setSalesTax(double salesTax) {
+        this.salesTax = salesTax;
+    }
+
+
 
     public ShippingAddress(){
 

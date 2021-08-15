@@ -33,6 +33,7 @@ public class CartPage extends BasePage {
     private By getCouponCodeApplyBtn = By.cssSelector("button[value='Apply coupon']");
     private By couponAmount = By.xpath("//tbody/tr[@class='cart-discount coupon-off25']/td[1]/span[1]");
     private By getSuccessMsgAfterCouponApply = By.xpath("//div[@role='alert']");
+    private By getSateTaxes = By.xpath("//*[contains(@class,'tax-rate')]//span");
    // @FindBy(css = ".has-text-align-center") private WebElement cartHeading;
 
     public CartPage(WebDriver driver) {
@@ -114,6 +115,10 @@ public class CartPage extends BasePage {
                 .enterPostCode(shippingAddress.getPostCode());
     }
 
+    public double verifyStateTaxes(ShippingAddress shippingAddress){
+        return shippingAddress.getSalesTax();
+    }
+
     public CartPage setCoupons(Coupons coupons){
         return getCouponCodeField(coupons.getCoupon());
     }
@@ -148,5 +153,12 @@ public class CartPage extends BasePage {
     public String getSuccessMsgAfterCouponApply(){
         waitForOverlayToDisappear(overlay);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(getSuccessMsgAfterCouponApply)).getText();
+    }
+
+    public double getStateTax(){
+        if(driver.findElements(getSateTaxes).size()==0){
+            return 0.0;
+        }
+        return Double.parseDouble(wait.until(ExpectedConditions.visibilityOfElementLocated(getSateTaxes)).getText().replaceAll("\\$",""));
     }
 }

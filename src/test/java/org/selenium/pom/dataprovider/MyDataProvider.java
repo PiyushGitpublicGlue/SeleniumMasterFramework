@@ -1,9 +1,6 @@
 package org.selenium.pom.dataprovider;
 
-import org.selenium.pom.objects.BillingAddress;
-import org.selenium.pom.objects.Coupons;
-import org.selenium.pom.objects.Product;
-import org.selenium.pom.objects.ShippingAddress;
+import org.selenium.pom.objects.*;
 import org.selenium.pom.utils.JacksonsUtils;
 import org.testng.annotations.DataProvider;
 
@@ -15,6 +12,12 @@ public class MyDataProvider {
     public Object[] getFeatureProduct() throws IOException {
 
         return JacksonsUtils.deserializeJson("productsOnHomePageFeatureSection.json", Product[].class);
+    }
+
+    @DataProvider(name = "getCategories", parallel = false)
+    public Object[] getCategories() throws IOException {
+
+        return JacksonsUtils.deserializeJson("SideLoadCategories.json", Categories[].class);
     }
 
     @DataProvider(name = "getStoreProducts", parallel = false)

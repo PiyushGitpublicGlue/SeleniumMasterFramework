@@ -22,8 +22,8 @@ public class AddToCartShippingAddressTest extends BaseTest {
         @Test(dataProvider = "getShippingAddressData",dataProviderClass = MyDataProvider.class)
         public void addToCartAddressChangeCheck(ShippingAddress shippingAddress) throws IOException, InterruptedException {
             CartApi cartApi = new CartApi();
-            Product product = new Product(1205);
-            cartApi.addToCart(product.getId(), 2);
+            Product product = new Product(1215);
+            cartApi.addToCart(product.getId(), 1);
             CartPage cartPage = new CartPage(getDriver()).load();
             injectCookiesToBrowser(cartApi.getCookies());
             cartPage.load().isLoaded();
@@ -32,6 +32,9 @@ public class AddToCartShippingAddressTest extends BaseTest {
             Assert.assertTrue(cartPage.getUpdatedShippingAddress().contains(shippingAddress.getPostCode()));
             System.out.println("ENTERED POSTAL CODE : "+shippingAddress.getPostCode());
             System.out.println("UPDATED SHIPPING ADDRESS : "+cartPage.getUpdatedShippingAddress());
+            System.out.println("ENTERED SALES TAXES : "+shippingAddress.getSalesTax());
+            System.out.println("UPDATED SALES TAXES : "+cartPage.getStateTax());
+            //Thread.sleep(5000);
         }
 
     //@Test//(dataProvider = "getShippingAddressData",dataProviderClass = MyDataProvider.class)
