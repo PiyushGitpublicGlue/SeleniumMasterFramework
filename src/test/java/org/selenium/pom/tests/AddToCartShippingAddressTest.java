@@ -15,6 +15,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
+import java.math.BigDecimal;
 
 public class AddToCartShippingAddressTest extends BaseTest {
 
@@ -32,8 +33,13 @@ public class AddToCartShippingAddressTest extends BaseTest {
             Assert.assertTrue(cartPage.getUpdatedShippingAddress().contains(shippingAddress.getPostCode()));
             System.out.println("ENTERED POSTAL CODE : "+shippingAddress.getPostCode());
             System.out.println("UPDATED SHIPPING ADDRESS : "+cartPage.getUpdatedShippingAddress());
-            System.out.println("ENTERED SALES TAXES : "+shippingAddress.getSalesTax());
-            System.out.println("UPDATED SALES TAXES : "+cartPage.getStateTax());
+            System.out.println("SUB TOTAL OF PRODUCT/S IN CART : "+cartPage.getSubTotal());
+            System.out.println("SALES TAXES IN LIST : "+shippingAddress.getSalesTax());
+            System.out.println("SALES TAXES IN UI : "+cartPage.getStateTax());
+            double taxesShouldBe = (cartPage.getSubTotal() % shippingAddress.getSalesTax());
+            System.out.println("TAXES SHOULD BE FOR THE PRODUCT/S IN CART : " +taxesShouldBe);
+            //System.out.println("TAXES SHOULD BE FOR THE PRODUCT/S IN CART : " +cartPage.getStateTax()/cartPage.getSubTotal()*100);
+            //Assert.assertEquals(taxesShouldBe,cartPage.getStateTax());
             //Thread.sleep(5000);
         }
 

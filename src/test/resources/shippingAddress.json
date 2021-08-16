@@ -1,37 +1,10 @@
 [
-  {
-  "country": "India",
-  "state":"Uttar Pradesh",
-  "city": "Ghaziabad",
-  "postCode": "201001",
-    "salesTax": "0.0"
-  },
-  {
-  "country": "India",
-  "state":"Uttar Pradesh",
-  "city": "TestCity",
-  "postCode": "201011",
-    "salesTax": "0.0"
-  },
-  {
-    "country": "United States (US)",
-    "state":"Florida",
-    "city": "FloridaCity",
-    "postCode": "32003",
-    "salesTax": 2.70
-  },
-  {
-    "country": "United States (US)",
-    "state":"Texas",
-    "city": "TexasCity",
-    "postCode": "77494",
-    "salesTax": 2.81
-  },
+
   {
     "country": "United States (US)",
     "state":"Ohio",
     "city": "OhioCity",
     "postCode": "43002",
-    "salesTax": 2.59
+    "salesTax": 5.75
   }
 ]

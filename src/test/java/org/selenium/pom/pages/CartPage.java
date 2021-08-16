@@ -29,6 +29,7 @@ public class CartPage extends BasePage {
     private By overlay = By.cssSelector(".blockUI.blockOverlay");
     @FindBy(xpath = "//*[@class='woocommerce-shipping-destination']//strong")@CacheLookup private WebElement getUpdatedShippingAddress;
     private By getTotal = By.xpath("//tr[@class='order-total']//bdi[1]");
+    private By subTotal = By.xpath("//tr[@class='cart-subtotal']//bdi[1]");
     private By getCouponCodeField = By.id("coupon_code");
     private By getCouponCodeApplyBtn = By.cssSelector("button[value='Apply coupon']");
     private By couponAmount = By.xpath("//tbody/tr[@class='cart-discount coupon-off25']/td[1]/span[1]");
@@ -160,5 +161,9 @@ public class CartPage extends BasePage {
             return 0.0;
         }
         return Double.parseDouble(wait.until(ExpectedConditions.visibilityOfElementLocated(getSateTaxes)).getText().replaceAll("\\$",""));
+    }
+
+    public double getSubTotal(){
+        return Double.parseDouble(wait.until(ExpectedConditions.visibilityOfElementLocated(subTotal)).getText().replaceAll("\\$",""));
     }
 }
