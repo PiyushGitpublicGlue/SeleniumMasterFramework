@@ -36,9 +36,7 @@ public class AddToCartShippingAddressTest extends BaseTest {
             System.out.println("SUB TOTAL OF PRODUCT/S IN CART : "+cartPage.getSubTotal());
             System.out.println("SALES TAXES IN LIST : "+shippingAddress.getSalesTax());
             System.out.println("SALES TAXES IN UI : "+cartPage.getStateTax());
-            double taxesShouldBe = (cartPage.getSubTotal() % shippingAddress.getSalesTax());
-            System.out.println("TAXES SHOULD BE FOR THE PRODUCT/S IN CART : " +taxesShouldBe);
-            //System.out.println("TAXES SHOULD BE FOR THE PRODUCT/S IN CART : " +cartPage.getStateTax()/cartPage.getSubTotal()*100);
+            System.out.println("TAXES SHOULD BE FOR THE PRODUCT/S IN CART : " +cartPage.getStateTax()/cartPage.getSubTotal()*100);
             //Assert.assertEquals(taxesShouldBe,cartPage.getStateTax());
             //Thread.sleep(5000);
         }
